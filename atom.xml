@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://baige6.github.io/"/>
-  <updated>2019-10-15T12:01:51.034Z</updated>
+  <updated>2019-10-16T06:35:56.321Z</updated>
   <id>https://baige6.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>kali设置开机自带启动ssh服务</title>
-    <link href="https://baige6.github.io/2019/10/15/kali%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%B8%A6%E5%90%AF%E5%8A%A8ssh%E6%9C%8D%E5%8A%A1/"/>
-    <id>https://baige6.github.io/2019/10/15/kali设置开机自带启动ssh服务/</id>
+    <title>kali设置开机自动启动ssh服务</title>
+    <link href="https://baige6.github.io/2019/10/15/kali%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8ssh%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://baige6.github.io/2019/10/15/kali设置开机自动启动ssh服务/</id>
     <published>2019-10-15T11:22:38.000Z</published>
-    <updated>2019-10-15T12:01:51.034Z</updated>
+    <updated>2019-10-16T06:35:56.321Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>大家在安装完成kali之后，由于win10和VMware直接兼容性的原因，可能会导致文件不能进行传输。这个时候我们就要使用ssh进行文件传输，<a id="more"></a>但是ssh服务在kali中是默认关闭的。接下来我们用几条简单的几条命令来开启ssh服务，并且设置开机自动启动。</p><hr align="center" width="300" color="#987cb9" size="1"><h3>修改代码</h3><p>nona /etc/ssh/sshd_config<br>将 permitrootlogin 前面的注释去掉,并且后面改为yes<br>如果没有则添加permitrootlogin  yes</p><p>将#PasswordAuthentication no的注释去掉，并且将NO修改为YES //kali中默认是yes<br>然后重启ssd服务<br>/etc/init.d/ssh restart</p><h1 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h1><p>update-rc.d ssh enable</p>]]></content>
     

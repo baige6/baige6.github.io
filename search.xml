@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[kali设置开机自带启动ssh服务]]></title>
-    <url>%2F2019%2F10%2F15%2Fkali%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%B8%A6%E5%90%AF%E5%8A%A8ssh%E6%9C%8D%E5%8A%A1%2F</url>
+    <title><![CDATA[kali设置开机自动启动ssh服务]]></title>
+    <url>%2F2019%2F10%2F15%2Fkali%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8ssh%E6%9C%8D%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[前言大家在安装完成kali之后，由于win10和VMware直接兼容性的原因，可能会导致文件不能进行传输。这个时候我们就要使用ssh进行文件传输，但是ssh服务在kali中是默认关闭的。接下来我们用几条简单的几条命令来开启ssh服务，并且设置开机自动启动。 修改代码 nona /etc/ssh/sshd_config将 permitrootlogin 前面的注释去掉,并且后面改为yes如果没有则添加permitrootlogin yes 将#PasswordAuthentication no的注释去掉，并且将NO修改为YES //kali中默认是yes然后重启ssd服务/etc/init.d/ssh restart 设置开机启动update-rc.d ssh enable]]></content>
   </entry>
   <entry>
